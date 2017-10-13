@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "251408120256",
+    "firebase_url": "https://catplan-2c5f7.firebaseio.com",
+    "project_id": "catplan-2c5f7",
+    "storage_bucket": "catplan-2c5f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251408120256:android:af634418dcc0471d",
+        "android_client_info": {
+          "package_name": "cse120project.catplan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "251408120256-if15v7b55am7r8qkt548ohselai39tn3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDYe7V31gQ_saBSMqnc-dbvV2js4JJG0o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
