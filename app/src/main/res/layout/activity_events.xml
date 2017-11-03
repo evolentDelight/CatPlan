@@ -27,4 +27,11 @@
             android:layout_height="wrap_content"
             tools:text="Events" />
     </android.support.design.widget.TextInputLayout>
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="75dp" />
 </android.support.constraint.ConstraintLayout>
