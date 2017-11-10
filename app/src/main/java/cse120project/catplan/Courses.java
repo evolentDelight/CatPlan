@@ -30,7 +30,7 @@ protected class Courses {
     String Days;
     String Hours;
 
-    Subj CourseSubj
+    Subj CourseSubj;
     Type CourseType;
     Day FinalDay;
 

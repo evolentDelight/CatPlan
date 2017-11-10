@@ -1,39 +1,47 @@
 /**
  * Created by Rolly-kun on 10/13/2017.
+ *
+ * This class is simply used to edit a course
  */
 package cse120project.catplan;
-import android.support.v7.app.AppCompatActivity;
+import cse120project.catplan.Courses;
+import java.util.LinkedList;
 
-public class editCourse extends AppCompatActivity {   //follow tutorial MainActivity
+
+import android.support.v7.app.AppCompatActivity;
+// extends AppCompatActivity
+
+public class editCourse extends Courses{   //follow tutorial MainActivity
 
     //private Button mSendData;   //Delete?
-    private Firebase mRef;
+    //private Firebase mRef;
     //testing
-    @Override
 
-    protected void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Firebase.setAndroidContext(this);
+    //This effectively changes the course information, replacing the old info.
+    void editCourse(String coursename, int CRN, int AmtUnit){
 
-        mRef = new Firebase("https://catplan-2c5f7.firebaseio.com/");
-
-        mSendData = (Button) findViewById(R.id.sendData);
-
-        mRef.addValueEventListener(new View.OnClickListener()){
-            @Override
-                    //Current Course info
-                public void onDataChange(DataSnapshot data Snapshot){
-                String courseName = get("Course Name");
-                String courseNumber = get("Course Number");
-                String courseRegistrationNum = get("CRN");
-                String semester = get("Semester");
-                String year = get("Year");
-
-                //Change Current info
-            }
-        }
+            CourseName = coursename;
+            CourseCRN = CRN;
+            int AmountOfUnits = AmtUnit;
     }
+
+    String getCourseName(){
+        return CourseName;
+    }
+
+    int getCourseCRN(){
+        return CourseCRN;
+    }
+
+    String getDays(){
+        return Days;
+    }
+
+    String getHours(){
+        return Hours;
+    }
+
+
 
 
 
