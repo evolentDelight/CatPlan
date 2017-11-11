@@ -5,7 +5,7 @@ This class is used to set the name of the courses and the ID of
  course to place on a list of favorites
  */
 
-protected class Courses {
+public class Courses {
 
     enum Day{
         M, T, W, R, F, S
@@ -17,7 +17,7 @@ protected class Courses {
 
     enum Subj{
         ANTH, BEST, BIOE, BIO, CHEM, CHN, COGS, CRS, CSE, CORE, CRES,
-        ESS, ECON, EECS, ENGR, ENG, ENVE, ES, ESS, FRE, GASP, HIST,
+        ECON, EECS, ENGR, ENG, ENVE, ES, ESS, FRE, GASP, HIST,
         IH, JPN, MATH, ME, MGMT, MSE, NSED, NSUS, PH, PHIL, PHYS, POLI,
         PSY, QSB, SOC, SPAN, WH, WRI
     }
@@ -34,51 +34,34 @@ protected class Courses {
     Type CourseType;
     Day FinalDay;
 
-    Courses(){
-
-    }
-
-    void static setCourseName(string name){
-        CourseName = name;
-    }
-
-    void static setCourseCRN(int CRN){
-        CourseID = CRN;
-    }
-
-    void static setCourseUnits(int units){
-        AmountofUnits = units;
-    }
-
-    void static setDays(string days){
+    Courses(String Name, int CRN, int units, String days, String hours){
+        CourseName = Name;
+        CourseCRN = CRN;
+        AmountOfUnits = units;
         Days = days;
-    }
-
-    void static setHours(string hours){
         Hours = hours;
+
     }
 
-    String static getCourseName(){
+    String getCourseName(){
         return CourseName;
     }
 
-    int static getCourseCRN(){
+    int getCourseCRN(){
         return CourseCRN;
     }
 
-    String static getDays(){
+    String getDays(){
         return Days;
     }
 
-    String static getHours(){
+    String getHours(){
         return Hours;
     }
 
-    void static removeinfo(){
+    void removeinfo(){
         CourseName = null;
-        CourseCRN = null;
-        AmountOFUnits = null;
+        CourseCRN = (Integer) null;
+        AmountOfUnits = (Integer) null;
 
     }
-
-}

@@ -1,49 +1,48 @@
 package cse120project.catplan;
 import java.util.LinkedList;
-import Courses;
+import cse120project.catplan.Courses;
 
 /*
 Here we will create a list of Favorite courses to set
  */
 
-protected class Favorites extends Courses{
+public class Favorites{
 
-    LinkedList Favorites<Courses>;
+    LinkedList<Courses> Schedule;
+    int ID;
 
-    Favorites() {   //creates a list to contain all the courses the person wants
-        Favorites = new LinkedList();
+    Favorites(int ID) {   //creates a list to contain all the courses the person wants
+        Schedule = new LinkedList();
+        ID = this.ID;
     }
 
-    void static addCourse(string name, int CRN){ //adds a course to the list of courses
+    void addCourse(String name, int CRN){ //adds a course to the list of courses
 
-        Courses C = new Courses();
+        Courses C = new Courses(name, CRN, 0, null, null);
 
-        C.setCourseName(name);
-        C.setCourseID(CRN);
-
-        Favorites.add(C);
+        Schedule.add(C);
     }
 
-    void static removeAllCourses(){ //will use when deleteing an entire Favorite course list
+    void removeAllCourses(){ //will use when deleteing an entire Favorite course list
 
         int i = 0;
-        while(Favorites.size() != 0){
-            removeCourse(Favorites.get(i).getCourseCRN());
+        while(Schedule.size() != 0){
+            removeCourse(Schedule.get(i).getCourseCRN());
         }
     }
 
-    void static removeCourse(int CRN){       //removes the chosen course
+    void removeCourse(int CRN){       //removes the chosen course
 
         int i = 0;
 
-        if(Favorites.size() != 0) {
+        if(Schedule.size() != 0) {
 
-            while (Favorites.get(i).getCourseCRN != CRN) {
+            while (Schedule.get(i).getCourseCRN() != CRN) {
                 i++;
             }
 
-            Favorites.get(i).removeinfo();
-            Favorites.remove(i);
+            Schedule.get(i).removeinfo();
+            Schedule.remove(i);
         }
     }
 
